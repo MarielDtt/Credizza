@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Credizza</title>
+    <!-- <link rel="shortcut icon" href=#> -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="css/styles.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"> <!-- Hace que el Logo Credizza linkee a index -->
+                <div class="logo">
+                    <img src="img/logo_completo.png" alt="Logo Credizza">
+                </div>
+            </a>
+            <h2 class="nombre-empresa">Credizza</h2> 
+        </div>
+
+        <nav>
+            <a href="#">Prestamos</a>
+            <a href="#">Beneficios</a>
+            <a href="#">Colaboradores</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Contactos</a>
+        </nav>
+
+    </header>
+    <div class="content">
+        <div class="container-slider">
+            <div class="slider" id="slider">
+                <div class="slider__section">
+                    <img src="img/Jubilados.png" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="img/Trabajadores.png" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="img/Beneficios.png" alt="" class="slider__img">
+                </div>
+                <div class="slider__section">
+                    <img src="img/Credizza.png" alt="" class="slider__img">
+                </div>
+        </div>
+
+            <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+            <div class="slider__btn slider__btn--left"  id="btn-left">&#60;</div>
+            
+            <script src="slider.js"></script>    
+            
+            
+        </div>
+
+        <form action="https://formsubmit.co/credizza@gmail.com" method="POST">
+            <h2 class="contact-title">Comunicate</h2>
+           
+            <div class="input-group">
+                <div class="input-row">
+                    <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required> 
+                    <input type="tel" name="phone" pattern="[0-9]+" placeholder="Teléfono sin 0 ni 15"  minlength="10" maxlength="10" required>
+                </div>
+                <input type="email" id="email" placeholder="Email (opcional)">
+
+                <select title="cual es tu ocupacion" name="Ocupacion" id="Ocupacion">
+                    <option value="opcion">¿Cual es tu Ocupacion?</option>
+                    <option value="Jubilado">Jubilado</option>
+                    <option value="Pensionado">Pensionado</option>
+                    <option value="Estatal">Trabajador Estatal</option>
+                    <option value="Privado">Trabajador Privado</option>
+                    <option value="otro">Otros</option>
+                </select>
+
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="Dejanos un Mensaje (opcional)"></textarea>
+                <input class="btn" type="submit" value="Enviar">
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/">
+                <input type="hidden" name="_captcha" value="false">
+
+            </div>
+
+                
+        </form>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Mi Negocio</p>
+    </footer>
+</body>
+</html>

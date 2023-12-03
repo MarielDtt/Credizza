@@ -1,0 +1,265 @@
+/* Estilos CSS */
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Albert Sans', sans-serif;
+    background-color: #fff2e2;
+    margin: 0px;
+    padding: 5px;
+    
+}
+
+a {
+    text-decoration: none; /* saca el subrayado a los hipervinculos */
+    color: black;
+}
+
+header {
+    background-color: #7cd554;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    display: flex;  /* el menu se muestra en forma horizontal */ 
+    justify-content: space-between; /* se utiliza para controlar la alineación horizontal  */
+    height: 70px;
+    align-items: center; /* Alinea verticalmente los elementos */
+    width: 98%; /* hace que el menu abarque toda a pantalla */
+    position: fixed; /* fija el menu para que al scrolear siga al menu */
+    z-index: 1000; /*hace que el header se vea correctamente y no lo tapen otros elementos */
+    margin: 10px; /* margenes */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.logo {
+    display: flex; 
+    align-items: center;
+    margin-left: -5px;
+}
+
+.logo img { /* Achica la imagen logo del header */
+    height: 68px;  
+}
+
+nav a {
+    font-weight: 600; /* grosor de la fuente */
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: white;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinea los elementos arriba */
+    margin-top: 20px;
+    margin-bottom: 5%;
+}
+
+.container-slider {
+    width: 75%;
+    max-width: 900px;
+    margin-left: 30px;
+    overflow: hidden; 
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: inline-block;
+
+}
+
+.slider{
+    display: flex;
+    width: 400%;
+    height: 400px;
+    margin-left: -100%;
+    
+}
+
+.slider__section{
+    width: 100%;
+}
+
+.slider__img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /*para que se vea completa la imagen */
+}
+
+.slider__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(124, 213, 84, 0.7);
+    top: 50%;
+    transform: translateY(-50%); /*centarlo de forma vertical*/
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+.slider__btn:hover{
+    background: #fff;
+}
+
+.slider__btn--left{
+    left: 22px;
+}
+
+.slider__btn--right{
+    right: 22px;
+}
+
+form{
+    padding: 30px 20px;
+    box-shadow: 0 0 20px rgba(124, 213, 84, 0.7);
+    border-radius: 40px;
+    text-align: center;
+    width: 25%;
+    margin-top: 85px;
+    margin-right: 10px; /* Añade espacio al margen derecho */
+    
+}
+
+
+
+.contact-title {
+    border-bottom: 2px dashed #7cd554;
+    padding-bottom: 15px; /* Espacio después de la línea punteada */
+    margin-bottom: 20px; /* Ajusta el margen inferior según necesites */
+}
+
+
+form h2 {
+    margin-top: -20px; /* Prueba con un valor negativo para subir más el título */
+}
+
+::placeholder {
+    font-size: 0.7em;
+    
+}
+
+/* Ajusta la posición vertical del campo de correo electrónico */
+input[type="email"] {
+    width: 100%; /* Modifica el ancho según lo necesites */
+    margin-top: -20px; /* Ajusta el margen superior */
+   
+
+}
+
+/* Estilos para resaltar el campo al escribir */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    box-shadow: 0 0 15px rgba(124, 213, 84, 0.7); /* Sombra al enfocar */
+    /* Otros estilos */
+}
+
+
+input.btn {
+    font-size: 14px; /* Tamaño de la fuente */
+    padding: 18px 15px; /* Relleno del botón */
+    width: 120px; 
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    line-height: 2px;    
+}
+
+input.btn:hover {
+    cursor: pointer; /* Cambiar a la forma de una mano al pasar el mouse */
+    box-shadow: 0 0 15px rgba(124, 213, 84, 0.7); /* Sombreado al pasar el mouse */
+
+}
+
+input.btn:active {
+    background-color: rgba(124, 213, 84, 0.7); /* Cambia el color al presionar */
+}
+
+
+textarea#message {
+    padding-left: 20px;
+    padding-top: 15px; /* Ajusta la posición inicial del texto */
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Ajusta el margen inferior según necesites */
+}
+
+.input-row input[type="text"] {
+    width: 50%; /* Ancho del campo Nombre y Apellido */
+    margin-right: 5px; /* Ajusta el margen derecho según necesites */
+}
+
+.input-row input[type="tel"] {
+    width: 50%; /* Ancho del campo Teléfono */
+    /* Ajusta el margen izquierdo para separar los campos */
+    margin-left: 5px;
+}
+/* Estilos para el menú desplegable */
+select {
+    width: 60%; /* Modifica el ancho según lo necesites */
+    margin-top: 5px; /* Ajusta el margen superior */
+    border-radius: 15px;
+    height: 38px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label{
+    margin-bottom: 15px;
+}
+
+/* Ajustes para el campo de mensaje */
+textarea {
+    width: 100%; /* Modifica el ancho según lo necesites, igual al campo email */
+    height: 100px; /* Ajusta la altura según tus necesidades */
+    margin-top: -5px; /* Ajusta el margen superior */
+    border-radius: 15px; /* Redondea los bordes */
+    display: block; /* Hacer que el elemento sea un bloque */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+    margin-bottom: 35px;
+    
+}
+/* Estilos para el placeholder del campo de mensaje */
+textarea#message::placeholder {
+    font-size: 12px;
+    padding-top: 20px; /* Mueve el placeholder hacia abajo */
+    padding-left: 30px; /* Ajusta el espacio desde el margen izquierdo */
+    
+}
+
+input{
+    width: 100%;
+    height: 25px;
+    padding: 17px 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    outline: none;
+}
+footer {
+    background-color: #7cd554;
+    color: #fff2e2;
+    text-align: center;
+    padding: 10px;
+}
